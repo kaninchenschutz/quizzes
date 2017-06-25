@@ -29,7 +29,7 @@ $(document).ready(function() {
     for(var i = 0; i < question.answers.length; i++) {
       answer = question.answers[i];
       answerHtml = answerHtml + `
-        <div class="col-sm-3">
+        <div class="col-sm-6">
           <a href="#" class="btn btn-block btn-default btn-lg js-answer"
           data-answer="${i}">
             ${answer.text}
