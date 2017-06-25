@@ -9,8 +9,14 @@ $(document).ready(function() {
         points++;
       }
     }
-    alert(points);
-    $('#quiz').html('');
+    var url = afterQuiz[0];
+    for(var i in afterQuiz) {
+      if(points >= i) {
+        url = afterQuiz[i];
+      }
+    }
+
+    window.location.href = url;
   }
 
   var drawQuestion = function() {
