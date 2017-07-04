@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <h1>Kaninchenschutz Quiz #1</h1>
+      <div class="logo">
+        <a href="https://www.kaninchenschutz.de"><img src="images/logo.jpg" alt="Kaninchenschutz" /></a>
+      </div>
+      <h1>Kaninchenschutz Ernährungsquiz</h1>
       <div id="quiz"></div>
     </div>
     <script
@@ -21,20 +25,14 @@
       window.afterQuiz = {
         0: 'quiz1_novize.html',
         3: 'quiz1_liebhaber.html',
-        5: 'quiz1_experte.html'
+        6: 'quiz1_experte.html'
       }
       window.quiz = {
         questions: [
           {
             question: "Was ist geeignet zum Essen für das Kaninchen?",
-            answer: 3,
+            answer: 2,
             answers: [
-              {
-                text: "Joghurt Drops"
-              },
-              {
-                text: "Trockengemüse"
-              },
               {
                 text: "Schafgarbe"
               },
@@ -80,8 +78,32 @@
             ]
           },
           {
-            question: "Sollten Kaninchen Mandarine essen?",
+            question: "Sollten Kaninchen Hollunder essen?",
             answer: 2,
+            answers: [
+              {
+                text: "Ja"
+              },
+              {
+                text: "Nein"
+              }
+            ]
+          },
+          {
+            question: "Sollten Kaninchen Avocado essen?",
+            answer: 2,
+            answers: [
+              {
+                text: "Ja"
+              },
+              {
+                text: "Nein"
+              }
+            ]
+          },
+          {
+            question: "Sollten Kaninchen Chinakohl essen?",
+            answer: 1,
             answers: [
               {
                 text: "Ja"
