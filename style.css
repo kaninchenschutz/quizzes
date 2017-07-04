@@ -43,6 +43,14 @@ h1 {
   text-align: center;
 }
 
+.btn-facebook {
+  background: #3B5998;
+  color: #fff;
+}
+.btn-facebook:hover {
+  color: #fff;
+}
+
 #quiz {
   margin-top: 40px;
 }
