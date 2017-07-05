@@ -7,6 +7,6 @@ layout: base
 
 <ul>
   {% for quiz in site.quizzes %}
-    <li><a href="{{quiz.url}}">{{quiz.title}}</a></li>
+    <li><a href="{{quiz.url | relative_url}}">{{quiz.title}}</a></li>
   {% endfor %}
 </ul>
