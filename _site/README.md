@@ -1,5 +1,0 @@
-# Kaninchenschutz Quizzes
-
-```
-$ jekyll serve
-```
