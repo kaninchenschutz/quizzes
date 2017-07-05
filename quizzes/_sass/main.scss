@@ -1,0 +1,56 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  padding-top: 30px;
+}
+
+.panel-heading {
+  color: #fff;
+  background-color: #6688bb;
+  background: -webkit-linear-gradient(top,#6688bb,#446699);
+  background-image: linear-gradient(rgb(102, 136, 187), rgb(68, 102, 153));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #6688bb;
+  background: -moz-linear- gradient(top,#6688bb,#446699);
+  background: linear-gradient(#6688bb,#446699);
+}
+
+.panel-title {
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+}
+
+h1 {
+  color: #446699;
+  text-align: center;
+}
+
+.btn-facebook {
+  background: #3B5998;
+  color: #fff;
+}
+.btn-facebook:hover {
+  color: #fff;
+}
+
+#quiz {
+  margin-top: 40px;
+}
