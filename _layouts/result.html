@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<h1>{{page.title}}</h1>
+<p class="text-center">
+  <br />
+  <a href="https://www.kaninchenschutz.de">
+    <img src="{{page.image}}" alt="Ergebnis" style="max-width:100%;" /></a>
+  <br /><br />
+  {{ content }}
+  <br /><br />
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | absolute_url }}" class="btn btn-lg btn-facebook"><i class="fa fa-facebook fa-lg"></i> Ergebnis auf Facebook teilen</a>
+  <a href="{{page.quiz}}" class="btn btn-lg btn-primary">Jetzt am Quiz teilnehmen!</a>
+  <br /><br />
+</p>

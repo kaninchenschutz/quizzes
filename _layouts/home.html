@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+<h1>Kaninchenschutz Quizzes</h1>
+<hr /><br />
+
+<ul>
+  {% for quiz in site.quizzes %}
+    <li><a href="{{quiz.url}}">{{quiz.title}}</a></li>
+  {% endfor %}
+</ul>

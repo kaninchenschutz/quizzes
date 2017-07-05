@@ -1,0 +1,16 @@
+title: Kaninchenschutz Quizzes
+description: >
+  Interessante Tests rund um das Thema Kaninchen und Kaninchenschutz
+url: "https://kaninchenschutz.github.io"
+twitter_username: jekyllrb
+github_username:  jekyll
+markdown: kramdown
+plugins:
+  - jekyll-feed
+collections:
+  quizzes:
+    output: true
+    values:
+      layout: quiz
+  ergebnisse:
+    output: true
