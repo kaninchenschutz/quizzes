@@ -7,3 +7,10 @@ github_username:  jekyll
 markdown: kramdown
 gems:
   - jekyll-feed
+collections:
+  quizzes:
+    output: true
+    values:
+      layout: quiz
+  ergebnisse:
+    output: true

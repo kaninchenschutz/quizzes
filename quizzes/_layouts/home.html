@@ -3,4 +3,10 @@ layout: base
 ---
 
 <h1>Kaninchenschutz Quizzes</h1>
-<a href="quiz_ernaehrung.html">Quiz Ernährung</a>
+<hr /><br />
+
+<ul>
+  {% for quiz in site.quizzes %}
+    <li><a href="{{quiz.url}}">{{quiz.title}}</a></li>
+  {% endfor %}
+</ul>
