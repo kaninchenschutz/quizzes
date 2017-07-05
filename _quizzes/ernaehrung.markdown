@@ -5,9 +5,9 @@ layout: quiz
 
 <script>
   window.afterQuiz = {
-    0: '/ergebnisse/ernaehrung_karotte.html',
-    3: '/ergebnisse/ernaehrung_karotte.html',
-    6: '/ergebnisse/ernaehrung_karotte.html'
+    0: '/quizzes/ergebnisse/ernaehrung_karotte.html',
+    3: '/quizzes/ergebnisse/ernaehrung_karotte.html',
+    6: '/quizzes/ergebnisse/ernaehrung_karotte.html'
   }
   window.quiz = {
     questions: [
