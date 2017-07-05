@@ -5,7 +5,7 @@ url: "https://kaninchenschutz.github.io"
 twitter_username: jekyllrb
 github_username:  jekyll
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
 collections:
   quizzes:

@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  if(!$('#quiz').length) {
+    return;
+  }
+
   var answers = [];
 
   var redirectToResult = function() {
