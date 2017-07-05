@@ -44,7 +44,12 @@ $(document).ready(function() {
     var html = `
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">${question.question}</h3>
+          <h3 class="panel-title">
+            ${question.question}
+            <div class="badge pull-left">
+              ${answers.length+1}/${quiz.questions.length}
+            </div>
+          </h3>
         </div>
         <div class="panel-body">
           <div class="row">
