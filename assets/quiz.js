@@ -70,3 +70,39 @@ $(document).ready(function() {
 
   drawQuestion();
 });
+
+$(document).ready(function() {
+  if(!$('#answers').length) {
+    return;
+  }
+
+  var drawAnswers = function() {
+    var answerHtml = '';
+    for(var i = 0; i < quiz.questions.length; i++) {
+      var question = quiz.questions[i];
+      answerHtml = answerHtml + `
+        <li class="list-group-item">
+          <strong>${question.question}</strong>
+          <span class="pull-right">${question.answers[question.answer-1].text}</span>
+        </li>
+      `;
+
+      var html = `
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Auflösung
+            </h3>
+          </div>
+          <ul class="list-group">
+            ${answerHtml}
+          </ul>
+        </div>
+      `;
+
+      $('#answers').html(html);
+    }
+  };
+
+  drawAnswers();
+});

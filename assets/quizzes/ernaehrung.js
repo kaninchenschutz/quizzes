@@ -7,7 +7,7 @@ window.quiz = {
   questions: [
     {
       question: "Was ist geeignet zum Essen für das Kaninchen?",
-      answer: 2,
+      answer: 1,
       answers: [
         {
           text: "Schafgarbe"

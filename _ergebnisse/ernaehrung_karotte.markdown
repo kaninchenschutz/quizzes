@@ -6,6 +6,8 @@ image:  "/assets/images/karotte.jpg"
 quiz: "/quizzes/ernaehrung"
 ---
 
+<script src="{{ "/assets/quizzes/ernaehrung.js" | relative_url }}"></script>
+
 <p class="text-center">
   <a href="https://www.kaninchenschutz.de/book/ern%C3%A4hrung">
     <i class="fa fa-book"></i>
