@@ -12,6 +12,6 @@ layout: base
   {{ content }}
   <br /><br />
   <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | absolute_url }}" class="btn btn-lg btn-facebook"><i class="fa fa-facebook fa-lg"></i> Ergebnis auf Facebook teilen</a>
-  <a href="{{page.quiz}}" class="btn btn-lg btn-primary">Jetzt am Quiz teilnehmen!</a>
+  <a href="{{ page.quiz | relative_url }}" class="btn btn-lg btn-primary">Jetzt am Quiz teilnehmen!</a>
   <br /><br />
 </p>
