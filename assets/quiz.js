@@ -122,7 +122,7 @@ $(document).ready(function() {
             </div>
             <div class="col-sm-4 text-right">
               ${question.answers[question.answer-1].text}
-              ${question.answerText}
+              ${question.answerText ? question.answerText : ''}
               ${answerImg}
             </div>
           </div>
