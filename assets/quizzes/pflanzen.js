@@ -185,6 +185,7 @@ window.quiz = {
     {
       question: "Welche Pflanze sollten Kaninchen nicht essen?",
       answer: 3,
+      answerText: "Aronstab sollten Kaninchen nicht essen",
       answers: [
         {
           text: "1",
