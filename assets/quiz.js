@@ -32,15 +32,33 @@ $(document).ready(function() {
     var answerHtml = '';
     for(var i = 0; i < question.answers.length; i++) {
       answer = question.answers[i];
+      var answerImage = '';
+      if(answer.image) {
+        answerImage = `
+          <div style="height:180px;background-image:url(${answer.image});background-repeat:no-repeat; background-position: center; background-size:cover;">
+          </div>
+        `;
+      }
       answerHtml = answerHtml + `
-        <div class="col-sm-6">
+        <div class="col-sm-6" style="margin-bottom:5px;">
           <a href="#" class="btn btn-block btn-default btn-lg js-answer"
           data-answer="${i}">
+            ${answerImage}
             ${answer.text}
           </a>
         </div>
       `;
     }
+    var questionImage = '';
+    if(question.image) {
+      questionImage = `
+        <div class="text-center">
+          <img src="${question.image}" class="img-responsive" style="max-height:230px;margin:0px auto;" />
+        </div>
+        <hr />
+      `;
+    }
+
     var html = `
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -52,6 +70,7 @@ $(document).ready(function() {
           </h3>
         </div>
         <div class="panel-body">
+          ${questionImage}
           <div class="row">
             ${answerHtml}
           </div>
