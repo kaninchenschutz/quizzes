@@ -99,10 +99,33 @@ $(document).ready(function() {
     var answerHtml = '';
     for(var i = 0; i < quiz.questions.length; i++) {
       var question = quiz.questions[i];
+      var questionImg = '';
+      var answerImg = '';
+      if(question.image) {
+        questionImg = `
+          <div style="height:90px;width:90px;background-image:url(${question.image});background-repeat:no-repeat; background-position: center; background-size:cover;">
+          </div>
+        `;
+      }
+      if(question.answers[question.answer-1].image) {
+        questionImg = `
+          <div style="height:90px;width:90px;background-image:url(${question.answers[question.answer-1].image});background-repeat:no-repeat; background-position: center; background-size:cover;">
+          </div>
+        `;
+      }
       answerHtml = answerHtml + `
         <li class="list-group-item">
-          <strong>${question.question}</strong>
-          <span class="pull-right">${question.answers[question.answer-1].text}</span>
+          <div class="row">
+            <div class="col-sm-8">
+              <strong>${question.question}</strong>
+              ${questionImg}
+            </div>
+            <div class="col-sm-4 text-right">
+              ${question.answers[question.answer-1].text}
+              ${answerImg}
+            </div>
+          </div>
+          <div class="clearfix"></div>
         </li>
       `;
 

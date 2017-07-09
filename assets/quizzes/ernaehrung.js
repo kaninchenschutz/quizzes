@@ -54,7 +54,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Sollten Kaninchen Hollunder essen?",
+      question: "Sollten Kaninchen Holunder essen?",
       answer: 2,
       answers: [
         {

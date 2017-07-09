@@ -1,7 +1,7 @@
 window.afterQuiz = {
-  0: '/quizzes/ergebnisse/ernaehrung_karotte.html',
-  3: '/quizzes/ergebnisse/ernaehrung_karotte.html',
-  6: '/quizzes/ergebnisse/ernaehrung_karotte.html'
+  0: '/quizzes/ergebnisse/pflanzen_gaensebluemchen.html',
+  6: '/quizzes/ergebnisse/pflanzen_rose.html',
+  9: '/quizzes/ergebnisse/pflanzen_orchidee.html'
 }
 window.quiz = {
   questions: [
