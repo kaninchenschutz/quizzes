@@ -6,7 +6,7 @@ window.afterQuiz = {
 window.quiz = {
   questions: [
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/baldrian.jpg",
       answer: 2,
       answers: [
@@ -25,7 +25,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist Minze?",
+      question: "Welche Pflanze ist Minze?",
       answer: 1,
       answers: [
         {
@@ -47,7 +47,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/birne.jpg",
       answer: 3,
       answers: [
@@ -66,7 +66,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/maisblaetter.jpg",
       answer: 1,
       answers: [
@@ -85,7 +85,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist Ahorn?",
+      question: "Welche Pflanze ist Ahorn?",
       answer: 2,
       answers: [
         {
@@ -107,7 +107,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/kirschbaum.jpg",
       answer: 1,
       answers: [
@@ -126,7 +126,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/ringelblume.jpg",
       answer: 3,
       answers: [
@@ -145,7 +145,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/petersilie.jpg",
       answer: 4,
       answers: [
@@ -164,7 +164,7 @@ window.quiz = {
       ]
     },
     {
-      question: "Was ist diese Pflanze?",
+      question: "Wie heißt diese Pflanze?",
       image: "/quizzes/assets/images/plants/schafgarbe.jpg",
       answer: 3,
       answers: [
