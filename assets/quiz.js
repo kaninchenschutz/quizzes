@@ -1,3 +1,29 @@
+var calculatePoints = function(an) {
+  var points = 0;
+  for(var i = 0; i < quiz.questions.length; i++) {
+    var question = quiz.questions[i];
+    if((question.answer - 1) === an[i]) {
+      points++;
+    }
+  }
+
+  return points;
+};
+
+var qq = function(p) {
+  var sPageURL = window.location.search.substring(1);
+  var sURLVariables = sPageURL.split('&');
+  var arr = [];
+  for(var i = 0; i < sURLVariables.length; i++) {
+    var sParameterName = sURLVariables[i].split('=');
+    if(sParameterName[0] == p) {
+      arr.push(parseInt(sParameterName[1]));
+    }
+  }
+
+  return arr;
+};
+
 $(document).ready(function() {
   if(!$('#quiz').length) {
     return;
@@ -6,13 +32,7 @@ $(document).ready(function() {
   var answers = [];
 
   var redirectToResult = function() {
-    var points = 0;
-    for(var i = 0; i < quiz.questions.length; i++) {
-      var question = quiz.questions[i];
-      if((question.answer - 1) === answers[i]) {
-        points++;
-      }
-    }
+    var points = calculatePoints(answers);
     var url = afterQuiz[0];
     for(var i in afterQuiz) {
       if(points >= i) {
@@ -20,7 +40,7 @@ $(document).ready(function() {
       }
     }
 
-    window.location.href = url;
+    window.location.href = url + '?' + decodeURIComponent($.param({ answers: answers }));
   }
 
   var drawQuestion = function() {
@@ -97,10 +117,12 @@ $(document).ready(function() {
 
   var drawAnswers = function() {
     var answerHtml = '';
+    var answers = qq('answers[]');
     for(var i = 0; i < quiz.questions.length; i++) {
       var question = quiz.questions[i];
       var questionImg = '';
       var answerImg = '';
+      var htmlClass = '';
       if(question.image) {
         questionImg = `
           <div style="height:90px;width:90px;background-image:url(${question.image});background-repeat:no-repeat; background-position: center; background-size:cover;">
@@ -113,8 +135,13 @@ $(document).ready(function() {
           </div>
         `;
       }
+      if(answers && (question.answer - 1) == answers[i]) {
+        htmlClass = 'list-group-item-success';
+      } else if(answers && answers.length > 0) {
+        htmlClass = 'list-group-item-danger';
+      }
       answerHtml = answerHtml + `
-        <li class="list-group-item">
+        <li class="list-group-item ${htmlClass}">
           <div class="row">
             <div class="col-sm-8">
               <strong>${question.question}</strong>
@@ -129,21 +156,24 @@ $(document).ready(function() {
           <div class="clearfix"></div>
         </li>
       `;
+    }
 
-      var html = `
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              Auflösung
-            </h3>
-          </div>
-          <ul class="list-group">
-            ${answerHtml}
-          </ul>
+    var html = `
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            Auflösung
+          </h3>
         </div>
-      `;
+        <ul class="list-group">
+          ${answerHtml}
+        </ul>
+      </div>
+    `;
+    $('#answers').html(html);
 
-      $('#answers').html(html);
+    if(answers) {
+      $('#points').html('<br />' + calculatePoints(answers) + ' / ' + quiz.questions.length + ' Punkten');
     }
   };
 
