@@ -143,13 +143,13 @@ $(document).ready(function() {
       answerHtml = answerHtml + `
         <li class="list-group-item ${htmlClass}">
           <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-6">
               <strong>${question.question}</strong>
               ${questionImg}
             </div>
-            <div class="col-sm-4 text-right">
+            <div class="col-sm-6 text-right">
               ${question.answers[question.answer-1].text}
-              ${question.answerText ? question.answerText : ''}
+              ${question.answerText ? '<div class="small">' + question.answerText + '</div>' : ''}
               ${answerImg}
             </div>
           </div>
