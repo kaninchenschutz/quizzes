@@ -3,4 +3,4 @@ title:  "Ernährungsquiz"
 layout: quiz
 ---
 
-<script src="{{ "/assets/quizzes/ernaehrung.js" | relative_url }}"></script>
+<script src="{{ "/assets/quizzes/ernaehrung.js" | absolute_url }}"></script>
