@@ -64,7 +64,7 @@ window.drawQuestion = function () {
   var question = quiz.questions[answers.length];
   var answerHtml = '';
   for (var i = 0; i < question.answers.length; i++) {
-    answer = question.answers[i];
+    var answer = question.answers[i];
     var answerImage = '';
     if (answer.image) {
       answerImage = '\n        <div style="height:180px;background-image:url(' + answer.image + ');background-repeat:no-repeat; background-position: center; background-size:cover;">\n        </div>\n      ';
